@@ -1,0 +1,132 @@
+﻿{
+  "result": {
+    "id": 1160842684,
+    "name": "Стойка (усиленная) переднего стабилизатора Hyundai/Kia 54830-C5000 54830C5000 для Santa Fe, Sorento, PALISADE",
+    "offer_id": "54830C5000",
+    "barcode": "54830C5000",
+    "buybox_price": "",
+    "category_id": 85828600,
+    "created_at": "2024-08-27T08:33:08.176988Z",
+    "images": [
+      "https://cdn1.ozone.ru/s3/multimedia-1-h/7112213909.jpg",
+      "https://cdn1.ozone.ru/s3/multimedia-1-r/7118746119.jpg",
+      "https://cdn1.ozone.ru/s3/multimedia-1-t/7118746121.jpg"
+    ],
+    "marketing_price": "1118.0000",
+    "min_ozon_price": "",
+    "old_price": "2500.0000",
+    "premium_price": "",
+    "price": "1400.0000",
+    "recommended_price": "",
+    "min_price": "",
+    "sources": [],
+    "stocks": {
+      "coming": 0,
+      "present": 4,
+      "reserved": 2
+    },
+    "errors": [],
+    "vat": "0.0",
+    "visible": true,
+    "visibility_details": {
+      "has_price": true,
+      "has_stock": true,
+      "active_product": false
+    },
+    "price_index": "0.00",
+    "commissions": [
+      {
+        "percent": 16,
+        "min_value": 0,
+        "value": 224,
+        "sale_schema": "fbo",
+        "delivery_amount": 0,
+        "return_amount": 0
+      },
+      {
+        "percent": 17,
+        "min_value": 0,
+        "value": 238,
+        "sale_schema": "fbs",
+        "delivery_amount": 0,
+        "return_amount": 0
+      },
+      {
+        "percent": 17,
+        "min_value": 0,
+        "value": 238,
+        "sale_schema": "rfbs",
+        "delivery_amount": 0,
+        "return_amount": 0
+      },
+      {
+        "percent": 17,
+        "min_value": 0,
+        "value": 238,
+        "sale_schema": "fbp",
+        "delivery_amount": 0,
+        "return_amount": 0
+      }
+    ],
+    "volume_weight": 0.5,
+    "is_prepayment": false,
+    "is_prepayment_allowed": true,
+    "images360": [],
+    "color_image": "",
+    "primary_image": "https://cdn1.ozone.ru/s3/multimedia-1-t/7112214029.jpg",
+    "status": {
+      "state": "price_sent",
+      "state_failed": "",
+      "moderate_status": "approved",
+      "decline_reasons": [],
+      "validation_state": "success",
+      "state_name": "Продается",
+      "state_description": "",
+      "is_failed": false,
+      "is_created": true,
+      "state_tooltip": "",
+      "item_errors": [],
+      "state_updated_at": "2024-10-15T06:00:46.161747Z"
+    },
+    "state": "",
+    "service_type": "IS_CODE_SERVICE",
+    "fbo_sku": 0,
+    "fbs_sku": 0,
+    "currency_code": "RUB",
+    "is_kgt": false,
+    "discounted_stocks": {
+      "coming": 0,
+      "present": 0,
+      "reserved": 0
+    },
+    "is_discounted": false,
+    "has_discounted_item": false,
+    "barcodes": [
+      "54830C5000"
+    ],
+    "updated_at": "2024-10-15T06:00:18.328173Z",
+    "price_indexes": {
+      "price_index": "PROFIT",
+      "external_index_data": {
+        "minimal_price": "",
+        "minimal_price_currency": "RUB",
+        "price_index_value": 0
+      },
+      "ozon_index_data": {
+        "minimal_price": "4188.0000",
+        "minimal_price_currency": "RUB",
+        "price_index_value": 0.25
+      },
+      "self_marketplaces_index_data": {
+        "minimal_price": "",
+        "minimal_price_currency": "RUB",
+        "price_index_value": 0
+      }
+    },
+    "sku": 1671872166,
+    "description_category_id": 17028756,
+    "type_id": 98943,
+    "is_archived": false,
+    "is_autoarchived": false
+  }
+}

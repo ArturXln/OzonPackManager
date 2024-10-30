@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonPackManager", "OzonPackManager\OzonPackManager.csproj", "{206490FF-9420-420F-AB65-6A4123B3FE40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozon", "Ozon\Ozon.csproj", "{BC13EFDE-8233-472A-9989-8817BCD23EB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonTests", "OzonTests\OzonTests.csproj", "{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{206490FF-9420-420F-AB65-6A4123B3FE40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{206490FF-9420-420F-AB65-6A4123B3FE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{206490FF-9420-420F-AB65-6A4123B3FE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{206490FF-9420-420F-AB65-6A4123B3FE40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC13EFDE-8233-472A-9989-8817BCD23EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC13EFDE-8233-472A-9989-8817BCD23EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC13EFDE-8233-472A-9989-8817BCD23EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC13EFDE-8233-472A-9989-8817BCD23EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE7A93EB-8C92-43B4-95B6-041048F96D25}
+	EndGlobalSection
+EndGlobal
