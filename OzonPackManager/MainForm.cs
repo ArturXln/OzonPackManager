@@ -18,6 +18,7 @@ namespace OzonPackManager
         public async void ScannerDataReceivedAsync(string data)
         {
             await ozonAPI.PrccessScannerDataAsync(data, cbPrintLabel.Checked);
+            RefresOrderInfo();
         }
 
         private async void button1_Click(object sender, EventArgs e)
