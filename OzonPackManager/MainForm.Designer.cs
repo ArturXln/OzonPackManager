@@ -44,6 +44,7 @@
             this.cbPrintLabel = new System.Windows.Forms.CheckBox();
             this.lOrdersCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.bGetScanner = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarcode)).BeginInit();
             this.SuspendLayout();
@@ -51,10 +52,9 @@
             // bLoadOrders
             // 
             this.bLoadOrders.AutoSize = true;
-            this.bLoadOrders.Location = new System.Drawing.Point(16, 630);
-            this.bLoadOrders.Margin = new System.Windows.Forms.Padding(4);
+            this.bLoadOrders.Location = new System.Drawing.Point(12, 512);
             this.bLoadOrders.Name = "bLoadOrders";
-            this.bLoadOrders.Size = new System.Drawing.Size(201, 28);
+            this.bLoadOrders.Size = new System.Drawing.Size(151, 23);
             this.bLoadOrders.TabIndex = 0;
             this.bLoadOrders.Text = "Загрузить заказы по дате";
             this.bLoadOrders.UseVisualStyleBackColor = true;
@@ -62,20 +62,18 @@
             // 
             // dtShippingDate
             // 
-            this.dtShippingDate.Location = new System.Drawing.Point(16, 598);
-            this.dtShippingDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtShippingDate.Location = new System.Drawing.Point(12, 486);
             this.dtShippingDate.Name = "dtShippingDate";
-            this.dtShippingDate.Size = new System.Drawing.Size(168, 20);
+            this.dtShippingDate.Size = new System.Drawing.Size(127, 20);
             this.dtShippingDate.TabIndex = 1;
             // 
             // picProduct
             // 
             this.picProduct.Image = ((System.Drawing.Image)(resources.GetObject("picProduct.Image")));
             this.picProduct.InitialImage = null;
-            this.picProduct.Location = new System.Drawing.Point(16, 15);
-            this.picProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.picProduct.Location = new System.Drawing.Point(12, 12);
             this.picProduct.Name = "picProduct";
-            this.picProduct.Size = new System.Drawing.Size(500, 500);
+            this.picProduct.Size = new System.Drawing.Size(375, 406);
             this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picProduct.TabIndex = 2;
             this.picProduct.TabStop = false;
@@ -84,30 +82,27 @@
             // 
             this.lbOrderID.AutoSize = true;
             this.lbOrderID.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbOrderID.Location = new System.Drawing.Point(575, 15);
-            this.lbOrderID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbOrderID.Location = new System.Drawing.Point(431, 12);
             this.lbOrderID.Name = "lbOrderID";
-            this.lbOrderID.Size = new System.Drawing.Size(413, 76);
+            this.lbOrderID.Size = new System.Drawing.Size(333, 63);
             this.lbOrderID.TabIndex = 3;
             this.lbOrderID.Text = "Список пуст";
             // 
             // lbProductName
             // 
             this.lbProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbProductName.Location = new System.Drawing.Point(5, 527);
-            this.lbProductName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbProductName.Location = new System.Drawing.Point(4, 428);
             this.lbProductName.Name = "lbProductName";
-            this.lbProductName.Size = new System.Drawing.Size(1223, 57);
+            this.lbProductName.Size = new System.Drawing.Size(917, 46);
             this.lbProductName.TabIndex = 4;
             this.lbProductName.Text = "-";
             // 
             // lbSKU
             // 
             this.lbSKU.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSKU.Location = new System.Drawing.Point(579, 209);
-            this.lbSKU.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSKU.Location = new System.Drawing.Point(434, 170);
             this.lbSKU.Name = "lbSKU";
-            this.lbSKU.Size = new System.Drawing.Size(503, 57);
+            this.lbSKU.Size = new System.Drawing.Size(377, 46);
             this.lbSKU.TabIndex = 5;
             this.lbSKU.Text = "SKU";
             this.lbSKU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,19 +111,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(580, 100);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(435, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(370, 48);
+            this.label2.Size = new System.Drawing.Size(303, 39);
             this.label2.TabIndex = 6;
             this.label2.Text = "Товаров в заказе:";
             // 
             // picBarcode
             // 
-            this.picBarcode.Location = new System.Drawing.Point(587, 262);
-            this.picBarcode.Margin = new System.Windows.Forms.Padding(4);
+            this.picBarcode.Location = new System.Drawing.Point(440, 213);
             this.picBarcode.Name = "picBarcode";
-            this.picBarcode.Size = new System.Drawing.Size(495, 187);
+            this.picBarcode.Size = new System.Drawing.Size(371, 152);
             this.picBarcode.TabIndex = 7;
             this.picBarcode.TabStop = false;
             // 
@@ -136,10 +129,9 @@
             // 
             this.lCountProducts.AutoSize = true;
             this.lCountProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lCountProducts.Location = new System.Drawing.Point(1039, 100);
-            this.lCountProducts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lCountProducts.Location = new System.Drawing.Point(779, 81);
             this.lCountProducts.Name = "lCountProducts";
-            this.lCountProducts.Size = new System.Drawing.Size(43, 48);
+            this.lCountProducts.Size = new System.Drawing.Size(36, 39);
             this.lCountProducts.TabIndex = 8;
             this.lCountProducts.Text = "0";
             // 
@@ -147,10 +139,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(580, 149);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(435, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 48);
+            this.label1.Size = new System.Drawing.Size(190, 39);
             this.label1.TabIndex = 9;
             this.label1.Text = "На складе:";
             // 
@@ -158,20 +149,18 @@
             // 
             this.lStock.AutoSize = true;
             this.lStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lStock.Location = new System.Drawing.Point(1039, 149);
-            this.lStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lStock.Location = new System.Drawing.Point(779, 121);
             this.lStock.Name = "lStock";
-            this.lStock.Size = new System.Drawing.Size(43, 48);
+            this.lStock.Size = new System.Drawing.Size(36, 39);
             this.lStock.TabIndex = 10;
             this.lStock.Text = "0";
             // 
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(249, 630);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(187, 512);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 28);
+            this.button1.Size = new System.Drawing.Size(170, 23);
             this.button1.TabIndex = 11;
             this.button1.Text = "Собрать товар";
             this.button1.UseVisualStyleBackColor = true;
@@ -182,10 +171,9 @@
             this.cbPrintLabel.AutoSize = true;
             this.cbPrintLabel.Checked = true;
             this.cbPrintLabel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbPrintLabel.Location = new System.Drawing.Point(249, 602);
-            this.cbPrintLabel.Margin = new System.Windows.Forms.Padding(4);
+            this.cbPrintLabel.Location = new System.Drawing.Point(187, 489);
             this.cbPrintLabel.Name = "cbPrintLabel";
-            this.cbPrintLabel.Size = new System.Drawing.Size(231, 19);
+            this.cbPrintLabel.Size = new System.Drawing.Size(199, 17);
             this.cbPrintLabel.TabIndex = 12;
             this.cbPrintLabel.Text = "Печать этикетки при оформлении";
             this.cbPrintLabel.UseVisualStyleBackColor = true;
@@ -194,10 +182,9 @@
             // 
             this.lOrdersCount.AutoSize = true;
             this.lOrdersCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lOrdersCount.Location = new System.Drawing.Point(1039, 450);
-            this.lOrdersCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lOrdersCount.Location = new System.Drawing.Point(779, 366);
             this.lOrdersCount.Name = "lOrdersCount";
-            this.lOrdersCount.Size = new System.Drawing.Size(43, 48);
+            this.lOrdersCount.Size = new System.Drawing.Size(36, 39);
             this.lOrdersCount.TabIndex = 14;
             this.lOrdersCount.Text = "0";
             // 
@@ -206,19 +193,30 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label3.Location = new System.Drawing.Point(579, 450);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(434, 366);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(367, 48);
+            this.label3.Size = new System.Drawing.Size(300, 39);
             this.label3.TabIndex = 13;
             this.label3.Text = "Очередь заказов:";
             // 
+            // bGetScanner
+            // 
+            this.bGetScanner.AutoSize = true;
+            this.bGetScanner.Location = new System.Drawing.Point(751, 512);
+            this.bGetScanner.Name = "bGetScanner";
+            this.bGetScanner.Size = new System.Drawing.Size(170, 23);
+            this.bGetScanner.TabIndex = 15;
+            this.bGetScanner.Text = "Подключить сканер";
+            this.bGetScanner.UseVisualStyleBackColor = true;
+            this.bGetScanner.Click += new System.EventHandler(this.bGetScanner_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1244, 694);
+            this.ClientSize = new System.Drawing.Size(933, 564);
+            this.Controls.Add(this.bGetScanner);
             this.Controls.Add(this.lOrdersCount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbPrintLabel);
@@ -235,7 +233,6 @@
             this.Controls.Add(this.dtShippingDate);
             this.Controls.Add(this.bLoadOrders);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Сборка заказов OZON";
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
@@ -262,6 +259,7 @@
         private System.Windows.Forms.CheckBox cbPrintLabel;
         private System.Windows.Forms.Label lOrdersCount;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button bGetScanner;
     }
 }
 

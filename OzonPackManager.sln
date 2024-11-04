@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozon", "Ozon\Ozon.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonTests", "OzonTests\OzonTests.csproj", "{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zebra", "Zebra\Zebra.csproj", "{824F2F5D-075A-481A-B01D-8C53206BD1DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DE8DA62-84DD-4417-8C92-EA0DFCC083D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824F2F5D-075A-481A-B01D-8C53206BD1DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824F2F5D-075A-481A-B01D-8C53206BD1DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824F2F5D-075A-481A-B01D-8C53206BD1DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824F2F5D-075A-481A-B01D-8C53206BD1DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

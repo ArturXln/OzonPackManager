@@ -1,21 +1,29 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using Zebra;
 
 namespace OzonPackManager
 {
     public partial class MainForm : Form
     {
         OzonApi ozonAPI = new OzonApi();
+        ScanerAdapter scanerAdapter = new ScanerAdapter();
+
         public MainForm()
         {
             InitializeComponent();
         }
 
+        public async void ScannerDataReceivedAsync(string data)
+        {
+            await ozonAPI.PrccessScannerDataAsync(data, cbPrintLabel.Checked);
+        }
+
         private async void button1_Click(object sender, EventArgs e)
         {
             ozonAPI = new OzonApi("Auth.xml");
-            await ozonAPI.GetOrders(dtShippingDate.Value);
+            await ozonAPI.GetOrdersAsync(dtShippingDate.Value);
             RefresOrderInfo();
         }
 
@@ -55,9 +63,13 @@ namespace OzonPackManager
 
         private async void button1_Click_1(object sender, EventArgs e)
         {
-            await ozonAPI.ProccessOrder(cbPrintLabel.Checked);
+            await ozonAPI.ProccessOrderAsync(cbPrintLabel.Checked);
             RefresOrderInfo();
         }
 
+        private void bGetScanner_Click(object sender, EventArgs e)
+        {
+            scanerAdapter.LoadScanner(this);
+        }
     }
 }

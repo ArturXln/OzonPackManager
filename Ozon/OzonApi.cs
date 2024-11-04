@@ -58,7 +58,7 @@ namespace OzonPackManager
         /// <summary>
         /// ОБработать сборку товара
         /// </summary>
-        public async Task ProccessOrder(bool isPrintLabel)
+        public async Task ProccessOrderAsync(bool isPrintLabel)
         {
             CurrentOrder.CompleteCurrentProduct();
             if (!CurrentOrder.IsFinished) return;
@@ -76,7 +76,7 @@ namespace OzonPackManager
         /// <summary>
         /// Получить список заказов для комплектации на указанную дату
         /// </summary>
-        public async Task GetOrders(DateTime dateShipping)
+        public async Task GetOrdersAsync(DateTime dateShipping)
         {
             JObject jOrders = await GetOrdersJObject(dateShipping);
             Orders = OzonOrder.CreateOrders(jOrders);
@@ -254,6 +254,13 @@ namespace OzonPackManager
             return Image.FromStream(barcode.Encode(BarcodeStandard.Type.Code39, CurrentOrder.CurrentProduct.BarCode.ToString()).Encode().AsStream());
         }
 
+        public async Task PrccessScannerDataAsync(string data, bool isPrintLabel)
+        {
+            if (data == CurrentOrder.CurrentProduct.BarCode)
+            {
+                await ProccessOrderAsync(isPrintLabel);
+            }
+        }
     }
 }
 
