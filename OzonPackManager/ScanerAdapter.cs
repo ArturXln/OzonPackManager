@@ -9,6 +9,8 @@ namespace OzonPackManager
     {
         ZebraScanner zebraScanner = new ZebraScanner();
         MainForm mainForm;
+        private delegate void SetTextDeleg(string text);
+
 
         /// <summary>
         /// BarcodeEvent received
@@ -21,7 +23,7 @@ namespace OzonPackManager
             {
                 string tmpScanData = scanData;
                 string fBarCode = ShowBarcodeLabel(tmpScanData);
-                DataReceived(fBarCode);
+                mainForm.BeginInvoke(new SetTextDeleg(si_DataReceived), new object[] { fBarCode });
             }
             catch (Exception ex)
             {
@@ -30,7 +32,7 @@ namespace OzonPackManager
 
         }
 
-        private void DataReceived(string fBarCode)
+        private void si_DataReceived(string fBarCode)
         {
             mainForm.ScannerDataReceivedAsync(fBarCode);
         }

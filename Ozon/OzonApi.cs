@@ -22,6 +22,7 @@ namespace OzonPackManager
         readonly string CliendID;
 
         List<OzonOrder> Orders = new List<OzonOrder>();
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
         public OzonOrder CurrentOrder
         {
@@ -64,7 +65,6 @@ namespace OzonPackManager
             if (!CurrentOrder.IsFinished) return;
             //собираем заказ в Озон
             string posting_nunmber = await CompleteOrder(CurrentOrder);
-
             if (isPrintLabel)
             {
                 await Task.Delay(3000); // ждем пока Озон приготовит этикетку
@@ -142,8 +142,9 @@ namespace OzonPackManager
                 doc.PrintSettings.PaperSize = new PaperSize("Custom", 295, 472);
                 doc.Print();
             }
-            catch 
+            catch(Exception ex) 
             {
+                Logger.Error(ex, "Ошибка при попытке печати этикетки");
             }
             finally { doc.Dispose(); }
         }
@@ -170,14 +171,21 @@ namespace OzonPackManager
         /// </summary>
         private async Task<HttpResponseMessage> RequestAsync(string url, string json)
         {
-            HttpClient httpClient = new HttpClient();
-            var buffer = Encoding.UTF8.GetBytes(json);
-            var byteContent = new ByteArrayContent(buffer);
-            byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            // авторизация
-            byteContent.Headers.Add("Client-Id", CliendID);
-            byteContent.Headers.Add("Api-Key", APIKey);
-            return (await httpClient.PostAsync(url, byteContent));
+            try
+            {
+                HttpClient httpClient = new HttpClient();
+                var buffer = Encoding.UTF8.GetBytes(json);
+                var byteContent = new ByteArrayContent(buffer);
+                byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                // авторизация
+                byteContent.Headers.Add("Client-Id", CliendID);
+                byteContent.Headers.Add("Api-Key", APIKey);
+                return (await httpClient.PostAsync(url, byteContent));
+            } catch (Exception ex)
+            {
+                Logger.Error(ex, "Ошибка при обращении к Ozon API");
+                return new HttpResponseMessage();
+            }
         }
 
 
@@ -256,6 +264,7 @@ namespace OzonPackManager
 
         public async Task PrccessScannerDataAsync(string data, bool isPrintLabel)
         {
+            Logger.Info("Сканер: {0}", data);
             if (data == CurrentOrder.CurrentProduct.BarCode)
             {
                 await ProccessOrderAsync(isPrintLabel);

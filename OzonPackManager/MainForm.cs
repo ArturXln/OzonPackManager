@@ -1,7 +1,6 @@
 ﻿using System;
-using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using Zebra;
 
 namespace OzonPackManager
 {
@@ -18,6 +17,12 @@ namespace OzonPackManager
         public async void ScannerDataReceivedAsync(string data)
         {
             await ozonAPI.PrccessScannerDataAsync(data, cbPrintLabel.Checked);
+            RefresOrderInfo();
+        }
+
+        private async void button1_Click_1(object sender, EventArgs e)
+        {
+            await ozonAPI.ProccessOrderAsync(cbPrintLabel.Checked);
             RefresOrderInfo();
         }
 
@@ -62,11 +67,7 @@ namespace OzonPackManager
             lOrdersCount.Text = "0";
         }
 
-        private async void button1_Click_1(object sender, EventArgs e)
-        {
-            await ozonAPI.ProccessOrderAsync(cbPrintLabel.Checked);
-            RefresOrderInfo();
-        }
+
 
         private void bGetScanner_Click(object sender, EventArgs e)
         {
