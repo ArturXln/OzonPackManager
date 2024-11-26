@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -63,14 +64,16 @@ namespace OzonPackManager
         {
             CurrentOrder.CompleteCurrentProduct();
             if (!CurrentOrder.IsFinished) return;
-            //собираем заказ в Озон
-            string posting_nunmber = await CompleteOrder(CurrentOrder);
-            if (isPrintLabel)
-            {
-                await Task.Delay(3000); // ждем пока Озон приготовит этикетку
-                PrintPackageLabel(await GetPackageLabel(posting_nunmber));
-            }
+            
+            string posting_nunmber = await CompleteOrder(CurrentOrder); //собираем заказ в Озон
+            if (isPrintLabel) await PrintLabelAsync(posting_nunmber);   // печать этикетки
             Orders.Remove(CurrentOrder);
+        }
+
+        private async Task PrintLabelAsync(string posting_nunmber)
+        {
+                await Task.Delay(3000); // ждем пока Озон приготовит этикетку
+                PrintPackageLabel(await GetPackageLabel(posting_nunmber), posting_nunmber);
         }
 
         /// <summary>
@@ -131,8 +134,11 @@ namespace OzonPackManager
             return await FileRequestAsync(requestUrl, PostingNumberObjectRequest(postingNumber).ToString());
         }
 
-        public void PrintPackageLabel(byte[] pdfContent)
+        public void PrintPackageLabel(byte[] pdfContent, string orderID)
         {
+            string Path2SaveLabels = Path.Combine(Application.StartupPath, "PDF");
+            if (!Directory.Exists(Path2SaveLabels)) Directory.CreateDirectory(Path2SaveLabels);
+
             var doc = new PdfDocument();
             try
             {
@@ -141,6 +147,7 @@ namespace OzonPackManager
                 doc.PrintSettings.PrinterName = pd.PrinterSettings.PrinterName;
                 doc.PrintSettings.PaperSize = new PaperSize("Custom", 295, 472);
                 doc.Print();
+                doc.SaveToFile(Path.Combine(Path2SaveLabels, orderID + ".pdf"));
             }
             catch(Exception ex) 
             {

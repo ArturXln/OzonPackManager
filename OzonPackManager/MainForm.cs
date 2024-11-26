@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -53,6 +54,7 @@ namespace OzonPackManager
             picProduct.ImageLocation = ozonAPI.CurrentOrder.CurrentProduct.ImageUrl;
             lStock.Text = ozonAPI.CurrentOrder.CurrentProduct.Stock.ToString();
             lOrdersCount.Text = ozonAPI.OrdersCount.ToString();
+            lCountProducts.ForeColor = ozonAPI.CurrentOrder.CurrentProduct.CountWait  > 1 ? Color.Red: Color.Black;
         }
 
         private void EmptyForm()
